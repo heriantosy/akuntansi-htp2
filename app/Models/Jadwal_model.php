@@ -30,9 +30,10 @@ class Jadwal_model extends Model
         // left outer join t_kelas k on k.kelas_id=j.kelas_id
 
         $query=\DB::table('t_jadwal')
-        ->select('t_jadwal.*', 't_dosen.nama_dosen','t_matakuliah.nama_mk')
+        ->select('t_jadwal.*', 't_dosen.nama_dosen','t_matakuliah.nama_mk','t_ruang.nama_ruang')
         ->join('t_dosen', 't_dosen.dosen_id', '=', 't_jadwal.dosen_id')
         ->join('t_matakuliah', 't_matakuliah.mkid', '=', 't_jadwal.mkid')
+        ->join('t_ruang', 't_ruang.ruang_id', '=', 't_jadwal.ruang_id')
         
         
         ->get();

@@ -4,6 +4,7 @@
     <td>No</td>
     <td>Nama Dosen</td>
     <td>Nama Matakulaih</td>
+    <td>Nama Ruang</td>
 </tr>
 <?php
 $no=0; 
@@ -14,6 +15,7 @@ $no++;
     <td>{{ $no }}</td>
     <td>{{ $rows->nama_dosen }}</td>
     <td>{{ $rows->nama_mk }}</td>
+    <td>{{ $rows->nama_ruang }}</td>
 </tr>
 
 <?php
